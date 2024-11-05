@@ -49,7 +49,7 @@ def moda(vals):
 	moda: str
 		la moda de la muestra
 	"""
-#encontrar el conjunto de elementos unicos
+  #encontrar el conjunto de elementos unicos
   categorias=[]
   for v in vals:
 	if v not in categorias:
@@ -63,15 +63,23 @@ def moda(vals):
 		n=n+1
 	cuentas.append(n)
 
-#guess and check
+ #guess and check
  i_max=0
  val_max=cuentas[0]
   for i in range(1,len(cuentas)):
      if cuentas[i]> val_max:
 	i_max=i
 	val_max=cuentas[i]
+	     
+#determinar todas las categorias que tengan el numero maximo de cuentas
+modas=[]
+for i in range(len(cuentas)):
+	if cuentas[i]== val_max:
+		modas.append(categoria[i])
+
 #retorno la moda
-  moda= categorias[i_max]
+#moda = categorias[i_max
+return modas
 
 
 
