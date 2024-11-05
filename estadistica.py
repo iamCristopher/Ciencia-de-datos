@@ -16,6 +16,7 @@ def promedio(lista):
     for v in lista:
         if math.isfinite(v):
             vals.append(v)
+	
         
     promedio=sum(vals)/len(vals)
     return promedio
@@ -155,3 +156,6 @@ def varianza(vals_in):
     for v in vals_in:
         if math.isfinite(v):
             vals.append(v)
+    for i in vals:
+	    varianza= ((i -(sum(vals)/len(vals)))**(2))/len(vals)
+    return varianza
