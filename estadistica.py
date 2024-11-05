@@ -159,3 +159,29 @@ def varianza(vals_in):
     for i in vals:
 	    varianza= ((i -(sum(vals)/len(vals)))**(2))/len(vals)
     return varianza
+def desviacion_estandar(vals_in):
+    """
+    Calcula la desviacion estandar de una lista de numeros
+    Detecta y elimina valores NaN
+    
+    Paràmetros
+    ----------
+    vals: lista
+        lista con los numeros
+        
+    Retorna
+    -------
+    desviacion estandar:float
+        desviacion estandarde los numeros (excluyendo NaNs)
+    """
+    
+    
+    #eliminamos los valores que sean NaNs
+    vals=[]
+    for v in vals_in:
+        if math.isfinite(v):
+            vals.append(v)
+    for i in vals:
+	    varianza= ((i -(sum(vals)/len(vals)))**(2))/len(vals)
+		desviacion_estandar= (varianza)**(1/2)
+	return desviacion_estandar
