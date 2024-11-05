@@ -1,5 +1,5 @@
 
-from Tareas import moda
+from estadistica import moda,promedio,mediana,rango,varianza,desviacion_estandar
 import numpy as np
 archivo=open("bsc_sel.dat","r")
 archivo.readline()
@@ -25,4 +25,9 @@ for lin in archivo:
         SpType.append(str(lin.split()[4]))
 
 archivo.close()
-print("La moda es: ",moda(SpType))
+print("La moda es: ",moda(Vmag))
+print("La promedio es: ",promedio(Vmag))
+print("La mediana es: ",mediana(Vmag))
+print("La rango es: ",rango(Vmag))
+print("La varianza es: ",varianza(Vmag))
+print("La desviacion estandar es: ",desviacion_estandar(Vmag))
