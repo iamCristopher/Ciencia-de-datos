@@ -56,3 +56,22 @@ def moda():
     for v in vals:
         if v not in categorias:
             categorias.append(v)
+    for c in categorias:
+        n=0
+        for val in vals:
+            if val ==c:
+                n=n+1
+        cuentas.append(n)
+    i_max=0
+    val_max= cuentas[0]
+    for i in range(1,len(cuentas)):
+        if cuentas[i]> val_max:
+            i_max = i
+            val_max=cuentas[i]
+    modas=[]
+    for i in range(len(cuentas)):
+        if cuentas[i]= val_max:
+            modas.append(categorias[i])
+    
+    moda= categorias[i_max]
+    return moda
