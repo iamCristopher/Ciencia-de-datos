@@ -1,5 +1,5 @@
 
-from Tareas import moda,promedio,mediana,rango,varianza,desviacion_estandar,mad,rango_intercuartilico,percentil
+from estadistica_univariada import moda,promedio,mediana,rango,varianza,desviacion_estandar,mad,rango_intercuartilico,percentil
 import numpy as np
 from collections import Counter
 import matplotlib.pyplot as plt
