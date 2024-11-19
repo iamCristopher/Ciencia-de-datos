@@ -91,3 +91,13 @@ print("Distancia IQR: ", rango_intercuartil(distancia))
 print("Distancia MAD: ", mad(distancia))
 print("Distancia desviacion_estandar: ", desviacion_estandar(distancia))
 print("Moda de tipo de galaxias: ", moda(tipos_galaxias))
+
+
+archivo= open("omegaCen.dat","r")
+archivo.readline()
+vhelio=[]
+for lin in archivo:
+    vhelio.append(float(lin.split()[8]))
+archivo.close()
+
+
