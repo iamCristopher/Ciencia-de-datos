@@ -366,5 +366,5 @@ def correlacion(vals_x, vals_y):
         if math.isfinite(vals_x[i]) & math.isfinite(vals_y[i]):
             x.append(vals_x[i])
             y.append(vals_y[i])
-    rxy= covarianza2(x,y)/ (varianza(x) + varianza(y))
+    rxy= covarianza2(x,y)/ (varianza(x)*varianza(y))
     return rxy
