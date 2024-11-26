@@ -356,7 +356,7 @@ def covarianza2(vals_x, vals_y):
     for xv, yv in zip(x,y):
         tt.append((xv-p_x)-(yv-p_y))
     covarianza= sum(tt)/ len(tt)
-    return covarianza
+    return covarianza2
 
 
 def correlacion(vals_x, vals_y):
@@ -366,5 +366,5 @@ def correlacion(vals_x, vals_y):
         if math.isfinite(vals_x[i]) & math.isfinite(vals_y[i]):
             x.append(vals_x[i])
             y.append(vals_y[i])
-    rxy= covarianza(x,y)/ (varianza(x) + varianza(y))
+    rxy= covarianza2(x,y)/ (varianza(x) + varianza(y))
     return rxy
