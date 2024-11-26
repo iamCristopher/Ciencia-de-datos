@@ -354,7 +354,7 @@ def covarianza2(vals_x, vals_y):
     
     tt=[]
     for xv, yv in zip(x,y):
-        tt.append((xv-p_x)-(yv-p_y))
+        tt.append((xv-p_x)*(yv-p_y))
     covarianza2= sum(tt)/ len(tt)
     return covarianza2
 
