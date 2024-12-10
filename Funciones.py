@@ -334,6 +334,22 @@ def covarianza(vals_x,vals_y):
     covarianza=sum(tt)/len(tt)
     return covarianza
     
+def covarianza2(vals_x, vals_y):
+    x=[]
+    y=[]
+    for i in range(len(vals_x)):
+        if math.isfinite(vals_x[i]) & math.isfinite(vals_y[i]):
+            x.append(vals_x[i])
+            y.append(vals_y[i])
+    p_x= promedio(x)
+    p_y= promedio(y)
+    
+    tt=[]
+    for xv, yv in zip(x,y):
+        tt.append((xv-p_x)*(yv-p_y))
+    covarianza2= sum(tt)/ len(tt)
+    return covarianza2
+    
 def correlacion(x, y):
     """
     Calcula la correlación de Pearson entre dos listas de valores. Ignora valores NaN.
